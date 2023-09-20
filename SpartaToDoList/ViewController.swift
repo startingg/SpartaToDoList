@@ -92,7 +92,7 @@ class ViewController: UIViewController {
         configureButtons()
     }
     
-    // 스토리 보드를 이용한 화면전환
+////     스토리 보드를 이용한 화면전환
 //    @objc func toDoListButtonDidTap() {
 //        let toDoListPage = UIStoryboard(name: "ToDoListPage", bundle: nil)
 //        guard let toDoListPageViewController = toDoListPage.instantiateViewController(withIdentifier: "ToDoListPage") as? ToDoListPageViewController else { return }
@@ -101,32 +101,33 @@ class ViewController: UIViewController {
 //        show(toDoListPageViewController, sender: nil)
 //    }
     
-    // 코드만으로 화면전환
+//     코드만으로 화면전환
     @objc func toDoListButtonDidTap() {
-        // ToDoListPageViewController 대신 해당 페이지의 루트 뷰 컨트롤러로 감싸진 내비게이션 컨트롤러를 만듭니다.
-        let toDoListViewController = ToDoListPageViewController() // ToDoListPageViewController의 인스턴스 생성
-        let navigationController = UINavigationController(rootViewController: toDoListViewController)
-        
-        navigationController.modalPresentationStyle = .fullScreen
-        present(navigationController, animated: true, completion: nil) // 내비게이션 컨트롤러를 표시
-    }
+           // ToDoListPageViewController 대신 해당 페이지의 루트 뷰 컨트롤러로 감싸진 내비게이션 컨트롤러를 만듭니다.
+           let toDoListViewController = ToDoListPageViewController() // ToDoListPageViewController의 인스턴스 생성
+        self.navigationController?.pushViewController(toDoListViewController, animated: true)
+       }
+    
+    
+//    @objc func toDoListButtonDidTap() {
+//        // ToDoListPageViewController 대신 해당 페이지의 루트 뷰 컨트롤러로 감싸진 내비게이션 컨트롤러를 만듭니다.
+//        let toDoListViewController = ToDoListPageViewController() // ToDoListPageViewController의 인스턴스 생성
+//        let navigationController = UINavigationController(rootViewController: toDoListViewController)
+//
+//        navigationController.modalPresentationStyle = .fullScreen
+//        present(navigationController, animated: true, completion: nil) // 내비게이션 컨트롤러를 표시
+//    }
     
     @objc func CompletedButtonDidTap() {
         // ToDoListPageViewController 대신 해당 페이지의 루트 뷰 컨트롤러로 감싸진 내비게이션 컨트롤러를 만듭니다.
-        let toDoListViewController = CompletedViewController() // ToDoListPageViewController의 인스턴스 생성
-        let navigationController = UINavigationController(rootViewController: toDoListViewController) // 루트 뷰 컨트롤러로 내비게이션 컨트롤러 생성
-        
-        navigationController.modalPresentationStyle = .fullScreen
-        present(navigationController, animated: true, completion: nil) // 내비게이션 컨트롤러를 표시
+        let completedViewController = CompletedViewController() // ToDoListPageViewController의 인스턴스 생성
+        self.navigationController?.pushViewController(completedViewController, animated: true)
     }
     
     
     @objc func ProfileButtonDidTap() {
         // ToDoListPageViewController 대신 해당 페이지의 루트 뷰 컨트롤러로 감싸진 내비게이션 컨트롤러를 만듭니다.
-        let toDoListViewController = ProfilePageViewController() // ToDoListPageViewController의 인스턴스 생성
-        let navigationController = UINavigationController(rootViewController: toDoListViewController) // 루트 뷰 컨트롤러로 내비게이션 컨트롤러 생성
-        
-        navigationController.modalPresentationStyle = .fullScreen
-        present(navigationController, animated: true, completion: nil) // 내비게이션 컨트롤러를 표시
+        let profilePageViewController = ProfilePageViewController() // ToDoListPageViewController의 인스턴스 생성
+        self.navigationController?.pushViewController(profilePageViewController, animated: true)
     }
 }

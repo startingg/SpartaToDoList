@@ -13,27 +13,7 @@ import UIKit
 
 class ToDoListPageViewController : UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-//    let backButton: UIButton = {
-//        let button = UIButton(type: .system)
-//        button.setTitle("< Back", for: .normal)
-//        button.setTitleColor(.systemBlue, for: .normal)
-//        button.titleLabel?.font = .systemFont(ofSize: 20)
-//        button.layer.cornerRadius = 50 / 2
-//        button.addTarget(self, action: #selector(backButtonDidTap), for: .touchUpInside)
-//        return button
-//    }()
-//
-//    func configureButtons() {
-//        backButton.translatesAutoresizingMaskIntoConstraints = false
-//
-//        view.addSubview(backButton)
-//
-//        NSLayoutConstraint.activate([
-//            backButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
-//            backButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
-//            backButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
-//            backButton.heightAnchor.constraint(equalToConstant: 64),
-//        ])}
+  
     
     
     private let table: UITableView = {
@@ -48,15 +28,12 @@ class ToDoListPageViewController : UIViewController, UITableViewDelegate, UITabl
     
     
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
 //        view.backgroundColor = .white
         
-//        configureButtons()
+      
         
         // UserDefaults에서 할 일 목록을 불러옴
         self.items = UserDefaults.standard.stringArray(forKey: "items") ?? []
@@ -71,6 +48,9 @@ class ToDoListPageViewController : UIViewController, UITableViewDelegate, UITabl
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
         // 오른쪽 상단에 "+" 버튼을 추가하고, 버튼을 누르면 didTapAdd 메서드가 호출되도록 합니다.
+        // 왼쪽 상단에 바버튼 추가 코드
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Back", image: nil , target: self, action: #selector(backButtonDidTap))
+        
     }
 
     // 할 일 목록을 UserDefaults에 저장하는 함수
@@ -165,8 +145,8 @@ class ToDoListPageViewController : UIViewController, UITableViewDelegate, UITabl
         saveCompletedTasks()
     }
     
-//    @objc func backButtonDidTap() {
-//        // ToDoListPageViewController 대신 해당 페이지의 루트 뷰 컨트롤러로 감싸진 내비게이션 컨트롤러를 만듭니다.
-//        self.navigationController?.popViewController(animated: true)
-//    }
+    @objc func backButtonDidTap() {
+        // ToDoListPageViewController 대신 해당 페이지의 루트 뷰 컨트롤러로 감싸진 내비게이션 컨트롤러를 만듭니다.
+        self.navigationController?.popViewController(animated: true)
+    }
 }
