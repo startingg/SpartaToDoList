@@ -13,6 +13,10 @@
 		CBC783942AB89CF400A57C76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC783922AB89CF400A57C76 /* Main.storyboard */; };
 		CBC783962AB89CF500A57C76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC783952AB89CF500A57C76 /* Assets.xcassets */; };
 		CBC783992AB89CF500A57C76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC783972AB89CF500A57C76 /* LaunchScreen.storyboard */; };
+		CBDA57F22AB92DF800C98F93 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CBDA57F12AB92DF800C98F93 /* Alamofire */; };
+		CBDA57F62ABA686D00C98F93 /* ToDoListPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA57F52ABA686D00C98F93 /* ToDoListPageVC.swift */; };
+		CBDA57FA2ABAC43900C98F93 /* CompletedPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA57F92ABAC43900C98F93 /* CompletedPageVC.swift */; };
+		CBDA57FC2ABAC45200C98F93 /* ProfilePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDA57FB2ABAC45200C98F93 /* ProfilePageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		CBC783952AB89CF500A57C76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBC783982AB89CF500A57C76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBC7839A2AB89CF500A57C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBDA57F52ABA686D00C98F93 /* ToDoListPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListPageVC.swift; sourceTree = "<group>"; };
+		CBDA57F92ABAC43900C98F93 /* CompletedPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedPageVC.swift; sourceTree = "<group>"; };
+		CBDA57FB2ABAC45200C98F93 /* ProfilePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBDA57F22AB92DF800C98F93 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +67,9 @@
 				CBC7838C2AB89CF400A57C76 /* AppDelegate.swift */,
 				CBC7838E2AB89CF400A57C76 /* SceneDelegate.swift */,
 				CBC783902AB89CF400A57C76 /* ViewController.swift */,
+				CBDA57F52ABA686D00C98F93 /* ToDoListPageVC.swift */,
+				CBDA57F92ABAC43900C98F93 /* CompletedPageVC.swift */,
+				CBDA57FB2ABAC45200C98F93 /* ProfilePageVC.swift */,
 				CBC783922AB89CF400A57C76 /* Main.storyboard */,
 				CBC783952AB89CF500A57C76 /* Assets.xcassets */,
 				CBC783972AB89CF500A57C76 /* LaunchScreen.storyboard */,
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = SpartaToDoList;
+			packageProductDependencies = (
+				CBDA57F12AB92DF800C98F93 /* Alamofire */,
+			);
 			productName = SpartaToDoList;
 			productReference = CBC783892AB89CF400A57C76 /* SpartaToDoList.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = CBC783802AB89CF400A57C76;
+			packageReferences = (
+				CBDA57F02AB92DF800C98F93 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = CBC7838A2AB89CF400A57C76 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +156,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC783912AB89CF400A57C76 /* ViewController.swift in Sources */,
+				CBDA57FA2ABAC43900C98F93 /* CompletedPageVC.swift in Sources */,
+				CBDA57F62ABA686D00C98F93 /* ToDoListPageVC.swift in Sources */,
+				CBDA57FC2ABAC45200C98F93 /* ProfilePageVC.swift in Sources */,
 				CBC7838D2AB89CF400A57C76 /* AppDelegate.swift in Sources */,
 				CBC7838F2AB89CF400A57C76 /* SceneDelegate.swift in Sources */,
 			);
@@ -356,6 +376,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CBDA57F02AB92DF800C98F93 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CBDA57F12AB92DF800C98F93 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBDA57F02AB92DF800C98F93 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CBC783812AB89CF400A57C76 /* Project object */;
 }
