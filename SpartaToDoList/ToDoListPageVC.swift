@@ -24,7 +24,7 @@ class ToDoListPageViewController : UIViewController, UITableViewDelegate, UITabl
 
     var items = [String]() // 할 일을 저장할 배열
     var completedTasks = [Bool]() // 완료 여부를 저장할 배열
-    
+    var importantItems = [String]()
     
     
     
@@ -33,10 +33,10 @@ class ToDoListPageViewController : UIViewController, UITableViewDelegate, UITabl
         
 //        view.backgroundColor = .white
         
-      
         
         // UserDefaults에서 할 일 목록을 불러옴
         self.items = UserDefaults.standard.stringArray(forKey: "items") ?? []
+//        self.importantItems = UserDefaults.standard.stringArray(forKey: "importantItems") ?? []
         // 초기 완료 여부 설정 (모두 미완료로 초기화)
         self.completedTasks = Array(repeating: false, count: self.items.count)
 
@@ -53,9 +53,17 @@ class ToDoListPageViewController : UIViewController, UITableViewDelegate, UITabl
         
     }
 
+    
+    
+    
+    
     // 할 일 목록을 UserDefaults에 저장하는 함수
     private func saveItems() {
         UserDefaults.standard.setValue(items, forKey: "items")
+    }
+    
+    private func saveImportantItems() {
+        UserDefaults.standard.setValue(importantItems, forKey: "importantItems")
     }
 
     // 완료 여부를 UserDefaults에 저장하는 함수
@@ -88,6 +96,27 @@ class ToDoListPageViewController : UIViewController, UITableViewDelegate, UITabl
                 }
             }
         }))
+        
+        alert.addAction(UIAlertAction(title: "Important!", style: .default, handler: { [weak self] (_) in
+            if let field = alert.textFields?.first {
+                if let text = field.text, !text.isEmpty {
+                    // 새로운 할 일을 출력하고, UserDefaults를 사용하여 할 일 목록을 저장합니다.
+                    print(text)
+                    DispatchQueue.main.async {
+                        self?.importantItems.append(text)
+                        self?.completedTasks.append(false) // 새로운 할 일은 미완료 상태로 추가됩니다.
+
+                        // 배열에 할 일과 완료 여부를 추가하고, TableView를 다시 로드하여 목록을 갱신합니다.
+                        self?.saveItems()
+                        self?.saveImportantItems()
+                        self?.saveCompletedTasks()
+                        self?.table.reloadData()
+                    }
+                }
+            }
+        }))
+        
+        
 
         present(alert, animated: true)
     }
@@ -97,14 +126,17 @@ class ToDoListPageViewController : UIViewController, UITableViewDelegate, UITabl
         if editingStyle == .delete {
             // 배열과 UserDefaults에서 해당 위치의 할 일과 완료 여부를 삭제합니다.
             items.remove(at: indexPath.row)
+            importantItems.remove(at: indexPath.row)
             completedTasks.remove(at: indexPath.row)
             saveItems()
+            saveImportantItems()
             saveCompletedTasks()
 
             // TableView에서 해당 행을 삭제합니다.
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
+    
 
     // TableView가 레이아웃될 때 TableView의 프레임을 뷰의 전체 크기로 설정합니다.
     override func viewDidLayoutSubviews() {
@@ -114,7 +146,7 @@ class ToDoListPageViewController : UIViewController, UITableViewDelegate, UITabl
 
     // TableView의 행 개수를 반환합니다.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return items.count + importantItems.count
     }
 
     // 각 행에 해당하는 셀을 반환합니다.
@@ -122,7 +154,9 @@ class ToDoListPageViewController : UIViewController, UITableViewDelegate, UITabl
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         // 해당 인덱스의 할 일을 셀의 텍스트로 표시합니다.
-        cell.textLabel?.text = items[indexPath.row]
+//        cell.textLabel?.text = items[indexPath.row]
+        let item = indexPath.row < items.count ? items[indexPath.row] : importantItems[indexPath.row - items.count]
+        cell.textLabel?.text = item
 
         // 해당 인덱스의 완료 여부를 가져와서 체크박스로 설정합니다.
         if completedTasks[indexPath.row] {
@@ -143,10 +177,5 @@ class ToDoListPageViewController : UIViewController, UITableViewDelegate, UITabl
 
         // 선택한 할 일의 완료 여부를 저장합니다.
         saveCompletedTasks()
-    }
-    
-    @objc func backButtonDidTap() {
-        // ToDoListPageViewController 대신 해당 페이지의 루트 뷰 컨트롤러로 감싸진 내비게이션 컨트롤러를 만듭니다.
-        self.navigationController?.popViewController(animated: true)
     }
 }

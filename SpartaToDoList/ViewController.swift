@@ -71,7 +71,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        view.backgroundColor = .white
         title = "" // 홈 화면의 타이틀 설정
         
         let imageView = UIImageView(frame: CGRect(x: 25, y: 160, width: 340, height: 210))
@@ -82,7 +82,7 @@ class ViewController: UIViewController {
                 case .success(let data):
                     DispatchQueue.main.async {
                         imageView.image = UIImage(data: data!)
-                        self.view.addSubview(imageView) // Add imageView to the view hierarchy after image is loaded
+                        self.view.addSubview(imageView)
                     }
                 case .failure:
                     print("error")
