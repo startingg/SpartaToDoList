@@ -425,7 +425,7 @@ extension ProfilePageViewController{
     
     func dummyImage1(){
         // Auto layout, variables, and unit scale are not yet supported
-        var view = UIView()
+        let view = UIView()
         view.frame = CGRect(x: 0, y: 0, width: 124, height: 124)
         let image0 = UIImage(named: "picture (1).png")?.cgImage
         let layer0 = CALayer()
@@ -436,7 +436,7 @@ extension ProfilePageViewController{
         view.layer.addSublayer(layer0)
 
 
-        var parent = self.view!
+        let parent = self.view!
         parent.addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.widthAnchor.constraint(equalToConstant: 124).isActive = true
@@ -448,7 +448,7 @@ extension ProfilePageViewController{
     
     func dummyImage2(){
         // Auto layout, variables, and unit scale are not yet supported
-        var view = UIView()
+        let view = UIView()
         view.frame = CGRect(x: 0, y: 0, width: 124, height: 124)
         let image0 = UIImage(named: "picture.png")?.cgImage
         let layer0 = CALayer()
@@ -458,7 +458,7 @@ extension ProfilePageViewController{
         view.layer.addSublayer(layer0)
 
 
-        var parent = self.view!
+        let parent = self.view!
         parent.addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.widthAnchor.constraint(equalToConstant: 124).isActive = true
@@ -469,7 +469,7 @@ extension ProfilePageViewController{
     
     func dummyImage3(){
         // Auto layout, variables, and unit scale are not yet supported
-        var view = UIView()
+        let view = UIView()
         view.frame = CGRect(x: 0, y: 0, width: 124, height: 124)
         let image0 = UIImage(named: "picture (3).png")?.cgImage
         let layer0 = CALayer()
@@ -480,7 +480,7 @@ extension ProfilePageViewController{
         view.layer.addSublayer(layer0)
 
 
-        var parent = self.view!
+        let parent = self.view!
         parent.addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.widthAnchor.constraint(equalToConstant: 124).isActive = true
@@ -491,7 +491,7 @@ extension ProfilePageViewController{
     
     func dummyImage4(){
         // Auto layout, variables, and unit scale are not yet supported
-        var view = UIView()
+        let view = UIView()
         view.frame = CGRect(x: 0, y: 0, width: 124, height: 124)
         let image0 = UIImage(named: "picture (4).png")?.cgImage
         let layer0 = CALayer()
@@ -502,7 +502,7 @@ extension ProfilePageViewController{
         view.layer.addSublayer(layer0)
 
 
-        var parent = self.view!
+        let parent = self.view!
         parent.addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.widthAnchor.constraint(equalToConstant: 124).isActive = true
@@ -513,7 +513,7 @@ extension ProfilePageViewController{
     
     func dummyImage5(){
         // Auto layout, variables, and unit scale are not yet supported
-        var view = UIView()
+        let view = UIView()
         view.frame = CGRect(x: 0, y: 0, width: 124, height: 124)
         let image0 = UIImage(named: "picture (5).png")?.cgImage
         let layer0 = CALayer()
@@ -524,7 +524,7 @@ extension ProfilePageViewController{
         view.layer.addSublayer(layer0)
 
 
-        var parent = self.view!
+        let parent = self.view!
         parent.addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.widthAnchor.constraint(equalToConstant: 124).isActive = true
@@ -535,7 +535,7 @@ extension ProfilePageViewController{
     
     func dummyImage6(){
         // Auto layout, variables, and unit scale are not yet supported
-        var view = UIView()
+        let view = UIView()
         view.frame = CGRect(x: 0, y: 0, width: 124, height: 124)
         let image0 = UIImage(named: "picture (6).png")?.cgImage
         let layer0 = CALayer()
@@ -546,7 +546,7 @@ extension ProfilePageViewController{
         view.layer.addSublayer(layer0)
 
 
-        var parent = self.view!
+        let parent = self.view!
         parent.addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.widthAnchor.constraint(equalToConstant: 124).isActive = true
@@ -557,7 +557,7 @@ extension ProfilePageViewController{
     
     func dummyImage7(){
         // Auto layout, variables, and unit scale are not yet supported
-        var view = UIView()
+        let view = UIView()
         view.frame = CGRect(x: 0, y: 0, width: 124, height: 124)
         let image0 = UIImage(named: "picture (7).png")?.cgImage
         let layer0 = CALayer()
@@ -567,7 +567,7 @@ extension ProfilePageViewController{
         view.layer.addSublayer(layer0)
 
 
-        var parent = self.view!
+        let parent = self.view!
         parent.addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.widthAnchor.constraint(equalToConstant: 124).isActive = true
