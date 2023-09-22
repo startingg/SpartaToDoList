@@ -372,19 +372,9 @@ class ProfilePageViewController : UIViewController{
     
     
     
-
     
     
-    
-    
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.backgroundColor = .white
-        
+    func views(){
         mainTitl()
         spartaimage()
         number1()
@@ -408,6 +398,22 @@ class ProfilePageViewController : UIViewController{
         dummyImage5()
         dummyImage6()
         dummyImage7()
+    }
+    
+
+    
+    
+    
+    
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = .white
+        
+        views()
     }
 }
 
