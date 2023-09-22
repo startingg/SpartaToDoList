@@ -69,6 +69,21 @@ class CompletedViewController : UIViewController,  UITableViewDataSource, UITabl
         table.frame = view.bounds
     }
 
+    
+    
+    
+    
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//           return sectionHeader[section]
+//       }
+//
+//    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+//           return sectionFooter[section]
+//       }
+    
+    
+    
+    
     // TableView의 행 개수를 반환합니다.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return completedItems.count

@@ -372,10 +372,7 @@ class ProfilePageViewController : UIViewController{
     
     
     
-    
-    func collectionView : UICollectionView{
-        
-    }
+
     
     
     
@@ -404,6 +401,191 @@ class ProfilePageViewController : UIViewController{
         button2()
         button3()
         poto()
-        
+        dummyImage1()
+        dummyImage2()
+        dummyImage3()
+        dummyImage4()
+        dummyImage5()
+        dummyImage6()
+        dummyImage7()
     }
+}
+
+
+
+
+
+extension ProfilePageViewController{
+    
+    func dummyImage1(){
+        // Auto layout, variables, and unit scale are not yet supported
+        var view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: 124, height: 124)
+        let image0 = UIImage(named: "picture (1).png")?.cgImage
+        let layer0 = CALayer()
+        layer0.contents = image0
+        layer0.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 1, b: 0, c: 0, d: 1, tx: 0, ty: 0))
+        layer0.bounds = view.bounds
+        layer0.position = view.center
+        view.layer.addSublayer(layer0)
+
+
+        var parent = self.view!
+        parent.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.widthAnchor.constraint(equalToConstant: 124).isActive = true
+        view.heightAnchor.constraint(equalToConstant: 124).isActive = true
+        view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 0).isActive = true
+        view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 350).isActive = true
+    }
+    
+    
+    func dummyImage2(){
+        // Auto layout, variables, and unit scale are not yet supported
+        var view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: 124, height: 124)
+        let image0 = UIImage(named: "picture.png")?.cgImage
+        let layer0 = CALayer()
+        layer0.contents = image0
+        layer0.bounds = view.bounds
+        layer0.position = view.center
+        view.layer.addSublayer(layer0)
+
+
+        var parent = self.view!
+        parent.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.widthAnchor.constraint(equalToConstant: 124).isActive = true
+        view.heightAnchor.constraint(equalToConstant: 124).isActive = true
+        view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 126).isActive = true
+        view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 350).isActive = true
+    }
+    
+    func dummyImage3(){
+        // Auto layout, variables, and unit scale are not yet supported
+        var view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: 124, height: 124)
+        let image0 = UIImage(named: "picture (3).png")?.cgImage
+        let layer0 = CALayer()
+        layer0.contents = image0
+        layer0.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 1, b: 0, c: 0, d: 1, tx: 0, ty: 0))
+        layer0.bounds = view.bounds
+        layer0.position = view.center
+        view.layer.addSublayer(layer0)
+
+
+        var parent = self.view!
+        parent.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.widthAnchor.constraint(equalToConstant: 124).isActive = true
+        view.heightAnchor.constraint(equalToConstant: 124).isActive = true
+        view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 252).isActive = true
+        view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 350).isActive = true
+    }
+    
+    func dummyImage4(){
+        // Auto layout, variables, and unit scale are not yet supported
+        var view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: 124, height: 124)
+        let image0 = UIImage(named: "picture (4).png")?.cgImage
+        let layer0 = CALayer()
+        layer0.contents = image0
+        layer0.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 1.25, b: 0, c: 0, d: 1, tx: -0.12, ty: 0))
+        layer0.bounds = view.bounds
+        layer0.position = view.center
+        view.layer.addSublayer(layer0)
+
+
+        var parent = self.view!
+        parent.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.widthAnchor.constraint(equalToConstant: 124).isActive = true
+        view.heightAnchor.constraint(equalToConstant: 124).isActive = true
+        view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 0).isActive = true
+        view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 476).isActive = true
+    }
+    
+    func dummyImage5(){
+        // Auto layout, variables, and unit scale are not yet supported
+        var view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: 124, height: 124)
+        let image0 = UIImage(named: "picture (5).png")?.cgImage
+        let layer0 = CALayer()
+        layer0.contents = image0
+        layer0.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 1.02, b: 0, c: 0, d: 1, tx: -0.01, ty: 0))
+        layer0.bounds = view.bounds
+        layer0.position = view.center
+        view.layer.addSublayer(layer0)
+
+
+        var parent = self.view!
+        parent.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.widthAnchor.constraint(equalToConstant: 124).isActive = true
+        view.heightAnchor.constraint(equalToConstant: 124).isActive = true
+        view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 126).isActive = true
+        view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 476).isActive = true
+    }
+    
+    func dummyImage6(){
+        // Auto layout, variables, and unit scale are not yet supported
+        var view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: 124, height: 124)
+        let image0 = UIImage(named: "picture (6).png")?.cgImage
+        let layer0 = CALayer()
+        layer0.contents = image0
+        layer0.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 1, b: 0, c: 0, d: 1, tx: 0, ty: 0))
+        layer0.bounds = view.bounds
+        layer0.position = view.center
+        view.layer.addSublayer(layer0)
+
+
+        var parent = self.view!
+        parent.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.widthAnchor.constraint(equalToConstant: 124).isActive = true
+        view.heightAnchor.constraint(equalToConstant: 124).isActive = true
+        view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 252).isActive = true
+        view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 476).isActive = true
+    }
+    
+    func dummyImage7(){
+        // Auto layout, variables, and unit scale are not yet supported
+        var view = UIView()
+        view.frame = CGRect(x: 0, y: 0, width: 124, height: 124)
+        let image0 = UIImage(named: "picture (7).png")?.cgImage
+        let layer0 = CALayer()
+        layer0.contents = image0
+        layer0.bounds = view.bounds
+        layer0.position = view.center
+        view.layer.addSublayer(layer0)
+
+
+        var parent = self.view!
+        parent.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.widthAnchor.constraint(equalToConstant: 124).isActive = true
+        view.heightAnchor.constraint(equalToConstant: 124).isActive = true
+        view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 0).isActive = true
+        view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 602).isActive = true
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+class CollectionView : UICollectionView{
+    
+    static let CV = CollectionView()
+    
+    
 }
