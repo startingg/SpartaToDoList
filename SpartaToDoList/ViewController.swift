@@ -12,9 +12,10 @@ class ViewController: UIViewController {
     let toDoListButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("ToDoList", for: .normal)
-        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 25)
-        button.layer.cornerRadius = 50 / 2
+        button.backgroundColor = .systemGreen
+        button.layer.cornerRadius = 10 / 2
         button.addTarget(self, action: #selector(toDoListButtonDidTap), for: .touchUpInside)
         return button
     }()
@@ -22,9 +23,10 @@ class ViewController: UIViewController {
     let completedButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Completed", for: .normal)
-        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 25)
-        button.layer.cornerRadius = 50 / 2
+        button.backgroundColor = .systemBlue
+        button.layer.cornerRadius = 10 / 2
         button.addTarget(self, action: #selector(CompletedButtonDidTap), for: .touchUpInside)
         return button
     }()
@@ -32,9 +34,10 @@ class ViewController: UIViewController {
     let profileButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Profile", for: .normal)
-        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 25)
-        button.layer.cornerRadius = 50 / 2
+        button.backgroundColor = .blue
+        button.layer.cornerRadius = 10 / 2
         button.addTarget(self, action: #selector(ProfileButtonDidTap), for: .touchUpInside)
         return button
     }()

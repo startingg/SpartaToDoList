@@ -126,7 +126,7 @@ class ToDoListPageViewController : UIViewController, UITableViewDelegate, UITabl
         if editingStyle == .delete {
             // 배열과 UserDefaults에서 해당 위치의 할 일과 완료 여부를 삭제합니다.
             items.remove(at: indexPath.row)
-            importantItems.remove(at: indexPath.row)
+//            importantItems.remove(at: indexPath.row)
             completedTasks.remove(at: indexPath.row)
             saveItems()
             saveImportantItems()
