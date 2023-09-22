@@ -188,15 +188,6 @@ class ProfilePageViewController : UIViewController{
     }
     
     
-    
-    
-    
-    
-    
-    
-
-    
-    
     func menu (){
         // Auto layout, variables, and unit scale are not yet supported
         let view = UIView()
@@ -355,9 +346,6 @@ class ProfilePageViewController : UIViewController{
     }
     
     
-    
-    
-    
 
     
     
@@ -383,6 +371,11 @@ class ProfilePageViewController : UIViewController{
     }
     
     
+    
+    
+    func collectionView : UICollectionView{
+        
+    }
     
     
     

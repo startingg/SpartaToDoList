@@ -10,9 +10,9 @@ import Foundation
 
 
 
-struct TaskList {
+struct TodoTaskList {
     private static let database = UserDefaults.standard
-    private static let key = "TaskList"
+    private static let key = "TodoTaskList"
     
     
 }
