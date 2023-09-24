@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB0C3B182ABBF6F1005BF20B /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0C3B172ABBF6F1005BF20B /* TaskList.swift */; };
-		CB3EA0B52ABDB166003F93FE /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3EA0B42ABDB166003F93FE /* Task.swift */; };
+		CB0C3B182ABBF6F1005BF20B /* ToDoTaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0C3B172ABBF6F1005BF20B /* ToDoTaskList.swift */; };
+		CB3EA0B52ABDB166003F93FE /* ToDoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3EA0B42ABDB166003F93FE /* ToDoTask.swift */; };
+		CB4B56A42AC05D9A00B05238 /* ToDoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4B56A32AC05D9A00B05238 /* ToDoListVC.swift */; };
 		CBC7838D2AB89CF400A57C76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC7838C2AB89CF400A57C76 /* AppDelegate.swift */; };
 		CBC7838F2AB89CF400A57C76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC7838E2AB89CF400A57C76 /* SceneDelegate.swift */; };
 		CBC783912AB89CF400A57C76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC783902AB89CF400A57C76 /* ViewController.swift */; };
@@ -22,8 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CB0C3B172ABBF6F1005BF20B /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
-		CB3EA0B42ABDB166003F93FE /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		CB0C3B172ABBF6F1005BF20B /* ToDoTaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTaskList.swift; sourceTree = "<group>"; };
+		CB3EA0B42ABDB166003F93FE /* ToDoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTask.swift; sourceTree = "<group>"; };
+		CB4B56A32AC05D9A00B05238 /* ToDoListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListVC.swift; sourceTree = "<group>"; };
 		CBC783892AB89CF400A57C76 /* SpartaToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpartaToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC7838C2AB89CF400A57C76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBC7838E2AB89CF400A57C76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,11 +73,12 @@
 				CBC7838C2AB89CF400A57C76 /* AppDelegate.swift */,
 				CBC7838E2AB89CF400A57C76 /* SceneDelegate.swift */,
 				CBC783902AB89CF400A57C76 /* ViewController.swift */,
+				CB4B56A32AC05D9A00B05238 /* ToDoListVC.swift */,
 				CBDA57F52ABA686D00C98F93 /* ToDoListPageVC.swift */,
 				CBDA57F92ABAC43900C98F93 /* CompletedPageVC.swift */,
 				CBDA57FB2ABAC45200C98F93 /* ProfilePageVC.swift */,
-				CB0C3B172ABBF6F1005BF20B /* TaskList.swift */,
-				CB3EA0B42ABDB166003F93FE /* Task.swift */,
+				CB0C3B172ABBF6F1005BF20B /* ToDoTaskList.swift */,
+				CB3EA0B42ABDB166003F93FE /* ToDoTask.swift */,
 				CBC783922AB89CF400A57C76 /* Main.storyboard */,
 				CBC783952AB89CF500A57C76 /* Assets.xcassets */,
 				CBC783972AB89CF500A57C76 /* LaunchScreen.storyboard */,
@@ -161,12 +164,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB3EA0B52ABDB166003F93FE /* Task.swift in Sources */,
-				CB0C3B182ABBF6F1005BF20B /* TaskList.swift in Sources */,
+				CB3EA0B52ABDB166003F93FE /* ToDoTask.swift in Sources */,
+				CB0C3B182ABBF6F1005BF20B /* ToDoTaskList.swift in Sources */,
 				CBC783912AB89CF400A57C76 /* ViewController.swift in Sources */,
 				CBDA57FA2ABAC43900C98F93 /* CompletedPageVC.swift in Sources */,
 				CBDA57F62ABA686D00C98F93 /* ToDoListPageVC.swift in Sources */,
 				CBDA57FC2ABAC45200C98F93 /* ProfilePageVC.swift in Sources */,
+				CB4B56A42AC05D9A00B05238 /* ToDoListVC.swift in Sources */,
 				CBC7838D2AB89CF400A57C76 /* AppDelegate.swift in Sources */,
 				CBC7838F2AB89CF400A57C76 /* SceneDelegate.swift in Sources */,
 			);
