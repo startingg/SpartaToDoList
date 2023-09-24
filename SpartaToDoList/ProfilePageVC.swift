@@ -414,6 +414,7 @@ class ProfilePageViewController : UIViewController{
         view.backgroundColor = .white
         
         views()
+        
     }
 }
 
@@ -593,5 +594,6 @@ class CollectionView : UICollectionView{
     
     static let CV = CollectionView()
     
+//    CV.leadingAnchor.constraint(equalTo: parent)
     
 }

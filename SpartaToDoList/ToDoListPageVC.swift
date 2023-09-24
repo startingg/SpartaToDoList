@@ -25,7 +25,7 @@ class ToDoListPageViewController : UIViewController, UITableViewDelegate, UITabl
     var items = [String]() // 할 일을 저장할 배열
     var completedTasks = [Bool]() // 완료 여부를 저장할 배열
     var importantItems = [String]()
-    
+    var todo = [ToDoTask]()
     
     
     override func viewDidLoad() {
@@ -58,6 +58,13 @@ class ToDoListPageViewController : UIViewController, UITableViewDelegate, UITabl
     
     
     // 할 일 목록을 UserDefaults에 저장하는 함수
+    
+    private func saveTodo(){
+        UserDefaults.standard.setValue(todo, forKey: "todo")
+    }
+    
+    
+    
     private func saveItems() {
         UserDefaults.standard.setValue(items, forKey: "items")
     }
@@ -85,6 +92,7 @@ class ToDoListPageViewController : UIViewController, UITableViewDelegate, UITabl
                     // 새로운 할 일을 출력하고, UserDefaults를 사용하여 할 일 목록을 저장합니다.
                     print(text)
                     DispatchQueue.main.async {
+                        self?.todo.append(Task(id: UUID(), title: text, isCompleted: false, category: "일반"))
                         self?.items.append(text)
                         self?.completedTasks.append(false) // 새로운 할 일은 미완료 상태로 추가됩니다.
 
@@ -103,6 +111,7 @@ class ToDoListPageViewController : UIViewController, UITableViewDelegate, UITabl
                     // 새로운 할 일을 출력하고, UserDefaults를 사용하여 할 일 목록을 저장합니다.
                     print(text)
                     DispatchQueue.main.async {
+                        self?.todo.append(Task(id: UUID(), title: text, isCompleted: false, category: "중요"))
                         self?.importantItems.append(text)
                         self?.completedTasks.append(false) // 새로운 할 일은 미완료 상태로 추가됩니다.
 
@@ -125,6 +134,7 @@ class ToDoListPageViewController : UIViewController, UITableViewDelegate, UITabl
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // 배열과 UserDefaults에서 해당 위치의 할 일과 완료 여부를 삭제합니다.
+            todo.remove(Task)
             items.remove(at: indexPath.row)
 //            importantItems.remove(at: indexPath.row)
             completedTasks.remove(at: indexPath.row)
@@ -146,7 +156,8 @@ class ToDoListPageViewController : UIViewController, UITableViewDelegate, UITabl
 
     // TableView의 행 개수를 반환합니다.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count + importantItems.count
+//        return items.count + importantItems.count
+        return todo.count
     }
 
     // 각 행에 해당하는 셀을 반환합니다.
